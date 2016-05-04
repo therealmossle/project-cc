@@ -1,0 +1,291 @@
+/* With box-sizing: border-box, borders and padding are drawn inside the set width of your content. The margin is drawn outside.
+========================================================================== */
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    /*font-size: 100%;*/
+    overflow-x: hidden;
+}
+body {
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+ul {
+    list-style: none;
+}
+.header__logo img {
+    height: 24px;
+    margin: 0 auto;
+    display: block;
+}
+.header__nav-side-nav {
+    /*padding: 0 1rem 0 1rem;*/
+    padding: 1rem 0 1rem 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+.header__nav-side-nav > li {
+    padding: 1rem 0;
+}
+.header__nav-categories a:after,
+.header__nav-links a:after {
+    content: '›';
+    float: right;
+    /*font-size: 1.5rem;*/
+}
+.product-grid__product > a {
+    color: #666;
+    /* font-size: 0.75rem; */
+    font-weight: normal;
+    text-decoration: none;
+    font: 0.75rem Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Utilities 
+========================================================================== */
+
+/*.center {
+    margin: 0 auto;
+}*/
+
+
+/*.container__width-100 {
+    width: 100%;
+}
+.container__width-90 {
+    width: 90%;
+}*/
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.text-center {
+    text-align: center;
+}
+.padding-1rem {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Small screens (default)
+========================================================================== */
+
+.container {
+    margin: 0 auto;
+    max-width: 1024rem;
+    width: 100%;
+}
+.column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.product-grid {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.product-grid__product {
+    float: left;
+    width: 50%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 2rem;
+}
+.product-grid img {
+    display: block;
+    height: auto;
+    margin: 0 auto 0.5rem auto;
+    width: 100%;
+    max-width: 300px;
+}
+.column.two-thirds {
+    width: 66.7%;
+    /*background: red;*/
+}
+.column.half {
+    width: 50%;
+}
+.column.fourth {
+    width: 25%;
+}
+.column.fifth {
+    width: 16.65%;
+    /*background: blue;*/
+}
+/*.row { }*/
+
+/* Intial menu */
+.header__mobile-nav {
+    background: #ffffff;
+    height: 100%;
+    left: -272px;
+    position: fixed;
+    width: 272px;
+    /*display: none;*/
+    border-right: 1px solid #ccc;
+    padding: 0 1rem 0 1rem;
+}
+.header__mobile-nav li {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+.header__menu {
+    border-bottom: 1px solid #ccc;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.header__menu-open {
+    /*display: block;
+    height: auto;
+    margin: 0 auto 0.5rem auto;
+    width: 100%;
+    max-width: 32px;*/
+    color: #333;
+    content: "\f0c9";
+    font-family: "FontAwesome";
+    font-size: 3rem;
+}
+.header__menu-close {
+    /*display: block;
+    height: auto;
+    margin: 0 auto 0.5rem auto;
+    width: 100%;
+    max-width: 32px;*/
+    color: #333;
+    content: "\f00d";
+    font-family: "FontAwesome";
+    font-size: 3rem;
+}
+/*styling open close button*/
+/*.button {
+	display:inline;
+	position:absolute;
+	right:50px;
+	top:6px;
+    left: 0px;
+	z-index:999;
+	font-size:3rem;
+}
+.button a {
+	text-decoration:none;
+}*/
+.button { content:" "; }
+.btn-open {
+    color:#333;
+	content:"\f0c9";
+	font-family:"FontAwesome";
+    font-size: 2.4rem;
+}
+.btn-close {
+    color:#333;
+	content:"\f00d";
+	font-family:"FontAwesome";
+    font-size: 2.4rem;
+    /*padding-left: 1rem;*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.btn-open a,
+.btn-open a {
+	text-decoration:none;
+}
+.btn-bag i {
+    float: right;
+    font-size: 2.4rem;
+}
+/*.btn-open:after {
+	color:#333;
+	content:"\f0c9";
+	font-family:"FontAwesome";
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.btn-open:hover:after {
+	color:#34B484;
+}
+.btn-close:after {
+	color:#333;
+	content:"\f00d";
+	font-family:"FontAwesome";
+	transition-property:all .2s linear 0s;
+	-moz-transition:all .2s linear 0s;
+	-webkit-transition:all .2s linear 0s;
+	-o-transition:all .2s linear 0s;
+}
+.btn-close:hover:after {
+	color: #34B484;
+}
+.overlay {
+	display:none;
+	position:fixed;
+	top:0;
+	height:100%;
+	width:100%;
+	background:#333;
+	overflow:auto;
+	z-index:99;
+}*/
+
+/* Medium screens (640px) 40rem
+========================================================================== */
+
+@media (min-width: 640rem) {
+    /*html { font-size: 112%; }
+  
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .product-grid__product { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }*/
+}
+
+/* Large screens (1024px) 64rem
+========================================================================== */
+
+@media (min-width: 1024rem) {
+    /*html { font-size: 120%; }
+  
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }    
+    
+  .product-grid__product { width: 33.3%; }*/
+}
+
+/* Clearfix by Nicolas Gallagher   
+========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
